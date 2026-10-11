@@ -1,13 +1,17 @@
 package tn.esprit.autoloc.service;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.autoloc.domain.Client;
 import tn.esprit.autoloc.repository.ClientRepository;
 
 import java.util.List;
+@Service                 // ← NOUVEAU
+@AllArgsConstructor
 
 public class ClientService implements IClientService{
 
-    ClientRepository clientRepository;
+    private final ClientRepository clientRepository;
 
     @Override
     public List<Client> retrieveAllClients() {

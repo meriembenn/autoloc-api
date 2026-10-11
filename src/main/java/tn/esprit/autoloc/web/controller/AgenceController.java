@@ -1,0 +1,14 @@
+package tn.esprit.autoloc.web.controller;
+
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import tn.esprit.autoloc.service.IAgenceService;
+
+@RestController
+@RequestMapping("/agences")
+@AllArgsConstructor
+public class AgenceController {
+
+    private final IAgenceService agenceService;
+}
